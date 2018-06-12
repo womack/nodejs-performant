@@ -1,0 +1,22 @@
+{
+  "name": "performanceTesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "restify": "^7.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-doctor": "clinic doctor -- node .\\app.js",
+    "start-flame": "clinic flame -- node .\\app.js",
+    "bombard": "autocannon -c100 localhost:3000/seed/v1",
+    "diagnose": "clinic doctor --on-port 'autocannon -c100 localhost:$PORT/seed/v1' -- node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
