@@ -1,0 +1,1 @@
+An example repo that shows how to use autocannon and clinic to performance test and debug a nodejs application
